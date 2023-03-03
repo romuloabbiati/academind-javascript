@@ -14,14 +14,14 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
 function add() {
     const userInputValue = getUserInput();
     const initialResult = currentValue;
-    currentValue = currentValue + userInputValue;
+    currentValue += userInputValue;
     createAndWriteOutput('+', initialResult, userInputValue);
 }
 
 function subtract() {
     const userInputValue = getUserInput();
     const initialResult = currentValue;
-    currentValue = currentValue - userInputValue;
+    currentValue -= userInputValue;
     createAndWriteOutput('-', initialResult, userInputValue);
 
 }
@@ -29,14 +29,14 @@ function subtract() {
 function multiply() {
     const userInputValue = getUserInput();
     const initialResult = currentValue;
-    currentValue = currentValue * userInputValue;
+    currentValue *= userInputValue;
     createAndWriteOutput('*', initialResult, userInputValue);
 }
 
 function divide() {
     const userInputValue = getUserInput();
     const initialResult = currentValue;
-    currentValue = currentValue / userInputValue;
+    currentValue /= userInputValue;
     createAndWriteOutput('/', initialResult, userInputValue);
 }
 
