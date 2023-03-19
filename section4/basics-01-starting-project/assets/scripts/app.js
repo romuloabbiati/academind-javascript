@@ -27,14 +27,18 @@ function writeToLog(
 }
 
 function calculateResult(calculationType) {
+    const userInputValue = getUserInput();
     if(calculationType !== 'ADD' &&
        calculationType !== 'SUBTRACT' &&
        calculationType !== 'MULTIPLY' && 
-       calculationType !== 'DIVIDE') {
+       calculationType !== 'DIVIDE' ||
+       !userInputValue
+       ) 
+    {
         return;
     }
        
-    const userInputValue = getUserInput();
+    
     const initialResult = currentValue;
     let mathOperator;
     if(calculationType === 'ADD') {
