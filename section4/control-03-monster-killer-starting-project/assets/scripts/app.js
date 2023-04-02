@@ -218,8 +218,19 @@ function printLogHandler(){
     }
 
     let j = 0;
-    do {
-        console.log(j);
+    outerLoop: do {
+        console.log('outer', j);
+
+        innerLoop: for(let k = 0; k < 5; k++) {
+            
+            if(k == 3) {
+                break outerLoop;
+                // continue => dangerous because it will cause an infinite loop because this code will never reach
+                // the j++ and j will never reach the value of 3
+            }
+            console.log('inner', k);
+        }
+
         j++;
     } while (j < 3);
 
