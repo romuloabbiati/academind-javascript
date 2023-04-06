@@ -15,6 +15,9 @@
 
 // greet();
 
-console.log(userName);
+'use strict';
 
 var userName = 'Romulo';
+var undefined = 'Isabela';
+
+console.log(userName);
