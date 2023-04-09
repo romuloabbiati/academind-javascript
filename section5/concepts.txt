@@ -1,0 +1,14 @@
+PRIMITIVE VALUES VS. REFERENCE VALUES
+
+Primitive Values: Strings, numbers, booleans, null, undefined, symbol
+Primitive Values: Stored in memory (normally on Stack). When you copy 
+a value from a variable to another variable, it will create a new copy of 
+that value. Both variables will point to different places in memory, so if 
+I change the value of one of these 2 variables, this change will not 
+reflect in the other and so on.
+
+Reference Values: All other objects
+Reference Values: Stored in memory (heap) and the variable stores a 
+pointer, i.e. an address to the location in memory. If a assign a variable 
+to another and change the value of the first variable, it will reflect in 
+the latter.
