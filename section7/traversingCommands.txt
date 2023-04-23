@@ -1,0 +1,34 @@
+TRAVERSING CHILD NODES
+  const ul = document.querySelector('ul');
+  ul.children -> it will show an array-like object with all li's
+
+  ul.childNodes -> similar but includes text nodes as well
+
+  ul.firstChild
+  ul.firstElementChild
+
+  ul.lastChild
+  ul.lastElementChild
+
+PARENTNODE & PARENTELEMENT
+  const liFirst = document.querySelector('li');
+  liFirst.parentNode
+  OR
+  liFirst.parentElement -> both will show the parent in this 
+case will be "ul"
+
+  liFirst.closest('body') -> good to select the closest ancestor up in the 
+hierarchy and in this case it will bring the <body> tag
+
+SELECTING SIBLING ELEMENTS
+
+  const liFirst = document.querySelector('li');
+  const ul = liFirst.parentElement;
+
+  ul.previousSibling -> it will bring a text node
+  ul.previousElementSibling -> it will bring the previous 
+sibling which in this case is the <header>
+
+  ul.nextSibling -> it will bring a text node
+  ul.nextElementSibling -> in this case it will bring a 
+<input> tag
