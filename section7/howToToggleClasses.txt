@@ -1,0 +1,9 @@
+HOW TO TOGGLE CLASSES
+
+- I can use the method .className, but the problem is that I have to 
+provide the exact class or all the class names used
+
+- .classList.toggle('cssClassName'); is a better way of adding a class to 
+an HTML element, it will toggle the className in and out in the HTML 
+element and I don't need to keep track of all class names used in the HTML 
+element.
