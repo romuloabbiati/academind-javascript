@@ -33,5 +33,11 @@ hobbies.shift();
 console.log(hobbies);
 
 hobbies[1] = 'Coding';
-hobbies[5] = 'Swimming';
 console.log(hobbies);
+
+hobbies.splice(1, 0, 'Good Food');
+console.log(hobbies);
+
+const removedElement = hobbies.splice(-1, 1);
+console.log(hobbies);
+console.log(removedElement);
