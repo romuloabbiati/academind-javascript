@@ -25,19 +25,27 @@
 //     }
 // }
 
-const hobbies = ['Cooking', 'Sports'];
-hobbies.push('Reading');
-hobbies.unshift('Coding');
-hobbies.pop();
-hobbies.shift();
-console.log(hobbies);
+// const hobbies = ['Cooking', 'Sports'];
+// hobbies.push('Reading');
+// hobbies.unshift('Coding');
+// hobbies.pop();
+// hobbies.shift();
+// console.log(hobbies);
 
-hobbies[1] = 'Coding';
-console.log(hobbies);
+// hobbies[1] = 'Coding';
+// console.log(hobbies);
 
-hobbies.splice(1, 0, 'Good Food');
-console.log(hobbies);
+// hobbies.splice(1, 0, 'Good Food');
+// console.log(hobbies);
 
-const removedElement = hobbies.splice(-1, 1);
-console.log(hobbies);
-console.log(removedElement);
+// const removedElement = hobbies.splice(-1, 1);
+// console.log(hobbies);
+// console.log(removedElement);
+
+
+const testResults = [1, 5.3, 1.5, 10.99, -5, 10];
+const storedResults = testResults.slice(2);
+
+testResults.push(5.91);
+
+console.log(storedResults, testResults);
