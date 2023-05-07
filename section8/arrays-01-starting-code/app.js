@@ -49,6 +49,8 @@ const storedResults = testResults.concat([3.99, 2]);
 
 testResults.push(5.91);
 
+console.log(testResults.includes(10.99));
+
 console.log(storedResults, testResults);
 console.log(testResults.lastIndexOf(1.5));
 
