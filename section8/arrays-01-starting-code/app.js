@@ -54,3 +54,19 @@ console.log(testResults.lastIndexOf(1.5));
 
 const personData = [{ name: 'Romulo' }, { name: 'Isabela' }];
 console.log(personData.indexOf({ name: 'Isabela' }));
+
+const isabela = personData.find((person, idx, persons) => {
+    return person.name === 'Isabela';
+});
+
+console.log(isabela);
+console.log(isabela, personData);
+
+isabela.name = 'Anna';
+console.log(isabela, personData);
+
+const romulosIndex = personData.findIndex((person, idx, persons) => {
+    return person.name === 'Romulo';
+});
+
+console.log(romulosIndex);
