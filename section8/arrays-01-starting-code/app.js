@@ -43,32 +43,49 @@
 // console.log(removedElement);
 
 
-const testResults = [1, 5.3, 1.5, 10.99, 1.5, -5, 10];
-// const storedResults = testResults.slice(2);
-const storedResults = testResults.concat([3.99, 2]);
+// const testResults = [1, 5.3, 1.5, 10.99, 1.5, -5, 10];
+// // const storedResults = testResults.slice(2);
+// const storedResults = testResults.concat([3.99, 2]);
 
-testResults.push(5.91);
+// testResults.push(5.91);
 
-console.log(testResults.includes(10.99));
+// console.log(testResults.includes(10.99));
 
-console.log(storedResults, testResults);
-console.log(testResults.lastIndexOf(1.5));
+// console.log(storedResults, testResults);
+// console.log(testResults.lastIndexOf(1.5));
 
-const personData = [{ name: 'Romulo' }, { name: 'Isabela' }];
-console.log(personData.indexOf({ name: 'Isabela' }));
+// const personData = [{ name: 'Romulo' }, { name: 'Isabela' }];
+// console.log(personData.indexOf({ name: 'Isabela' }));
 
-const isabela = personData.find((person, idx, persons) => {
-    return person.name === 'Isabela';
+// const isabela = personData.find((person, idx, persons) => {
+//     return person.name === 'Isabela';
+// });
+
+// console.log(isabela);
+// console.log(isabela, personData);
+
+// isabela.name = 'Anna';
+// console.log(isabela, personData);
+
+// const romulosIndex = personData.findIndex((person, idx, persons) => {
+//     return person.name === 'Romulo';
+// });
+
+// console.log(romulosIndex);
+
+const prices = [10.99, 5.99, 3.99, 6.59];
+const tax = 0.19;
+
+const taxAdjustedPrices = [];
+
+// for(const price of prices) {
+//     taxAdjustedPrices.push(price * (1 + tax));
+// }
+// console.log(taxAdjustedPrices);
+
+prices.forEach((price, idx, prices) => {
+    const priceObj = { index: idx, taxAdjPrice: price * (1 + tax)};
+    taxAdjustedPrices.push(priceObj);
 });
 
-console.log(isabela);
-console.log(isabela, personData);
-
-isabela.name = 'Anna';
-console.log(isabela, personData);
-
-const romulosIndex = personData.findIndex((person, idx, persons) => {
-    return person.name === 'Romulo';
-});
-
-console.log(romulosIndex);
+console.log(taxAdjustedPrices);
