@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  const originalArray = [{price: 10.99}, 
+{price: 5.99}, {price: 29.99}];
+
+  const transformedArray = originalArray.map(obj => obj.price);
+  const sum = transformedArray.reduce((prevValue, curValue) => prevValue + 
+curValue, 0);
+  console.log(transformedArray);
+  console.log(sum);
+  
+  const originalArray2 = [{price: 10.99} , {price: 5.99}, 
+{price: 29.99}];
+  const sum2 = originalArray2.reduce((sumVal, curVal) => sumVal + 
+curVal.price, 0);
+  console.log(originalArray2);
+  console.log(sum2);
+
+  const originalArray3 = [{price: 10.99}, {price: 5.99}, 
+{price: 29.99}];
+  const sum3 = originalArray3.map(obj => obj.price)
+                  .reduce((prevValue, curValue) => 
+                  prevValue + curValue, 0);
+
+  console.log(sum3);
+</script>
+</head>
+<body>
+</body>
+</html>
