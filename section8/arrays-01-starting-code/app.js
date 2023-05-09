@@ -160,3 +160,17 @@ console.log(transformedData);
 const nameFragments = ['Romulo','Hipolito','Abbiati'];
 const name = nameFragments.join(' ');
 console.log(name);
+
+const copiedNameFragments = [...nameFragments];
+nameFragments.push('Mr');
+console.log(nameFragments, copiedNameFragments);
+
+console.log(Math.min(...prices));
+
+
+const persons = [{name: 'Romulo', age: 36}, {name: 'Anna', age: 35}];
+const copiedPersons = persons.map(person => ({name: person.name, age: person.age}));
+persons.push({name: 'Isabela', age: 30});
+persons[1].age = 36;
+
+console.log(persons, copiedPersons);
