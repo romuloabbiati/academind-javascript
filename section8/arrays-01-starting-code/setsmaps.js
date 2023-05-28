@@ -41,13 +41,20 @@
 
 
 // WeakSet
-
 let person = {name: 'Romulo'};
 const persons = new WeakSet();
 persons.add(person);
 
 // ... some operations
-
-person = null;
+// person = null;
 
 console.log(persons);
+
+// WeakMap
+const personData = new WeakMap();
+personData.set(person, 'Extra info!');
+
+// ... some operations and then I clear the address of the variable person
+person = null;
+
+console.log(personData);
