@@ -1,0 +1,58 @@
+const prices = [10.99, 5.99, 3.99, 6.59];
+const tax = 0.19;
+const taxAdjustedPrices = [];
+
+prices.forEach((price, idx, prices) => {
+  taxAdjustedPrices.push(price * (1 + tax));
+});
+
+prices.forEach((price, idx, prices) => {
+  const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+  taxAdjustedPrices.push(priceObj);
+});
+
+prices.map((price, idx, prices) => {
+  const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+  return priceObj;
+});
+
+const sortedPrices = prices.sort((a, b) => {
+  if(a > b) {
+    return 1;
+  } else if(a === b) {
+    return 0;
+  } else {
+    return -1;
+  }
+});
+
+const filteredPrices = prices.filter((price, index, prices) => {
+  return price > 6;
+});
+
+const shortFilteredPrices = prices.filter(p => p > 6);
+
+// REDUCE
+let sum = 0;
+
+prices.forEach((price) => {
+  sum += price;
+});
+
+const sum = prices.reduce((prevValue, curValue, curIndex, prices) => {
+  return prevValue + curValue;
+}, 0);
+
+// ARRAY DESTRUCTURING
+const nameData = ['Romulo', 'Abbiati', 'Mr', 36];
+const [firstName, lastName, ...otherInfo] = nameData;
+console.log(firstName, lastName, otherInfo);
+
+// SPREAD OPERATOR
+const nameFragments = ['Romulo', 'Abbiati'];
+const copiedNameFragments = [...nameFragments];
+// the line above will copy each and every elements from nameFragments 
+// and will store within copiedNameFragments
+
+// if i just do const copiedNameFragments = [nameFragments];
+// it will store an array within the array
