@@ -1,19 +1,30 @@
+const movieList = document.getElementById('movie-list');
+movieList.style['background-color'] = 'red';
+movieList.style.display = 'block';
+
+const userChosenKeyName = 'level';
+
 let person = {
-    name: 'Romulo',
+    'first name': 'Romulo',
     age: 36,
-    hobbies: ['Coding', 'Cooking'],
+    hobbies: ['coding', 'cooking'],
+    [userChosenKeyName]: '...',
     greet: function() {
-        console.log('Hi there!');
-    }
+        alert('Hi there!');
+    },
+    1.5: 'hello'
 };
 
 // person.age = 35;
-person.isAdmin = true;
-
-console.log(person);
-
 delete person.age;
 // person.age = undefined;
 // person.age = null;
+// person.greet();
 
+person.isAdmin = true;
+
+const keyName = 'first name';
+
+console.log(person[keyName]);
+console.log(person[1.5]);
 console.log(person);
