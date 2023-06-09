@@ -3,76 +3,45 @@ const searchBtn = document.getElementById('search-btn');
 
 const movies = [];
 
+const renderMovies = () => {
+    const movieList = document.getElementById('movie-list');
+
+    if(movies.length === 0) {
+        movieList.classList.remove('visible');
+    } else {
+        movieList.classList.add('visible');
+    }
+
+    movieList.innerHTML = '';
+
+    movies.forEach((movie) => {
+        const movieEl = document.createElement('li');
+        movieEl.textContent = movie.info.title;
+        movieList.append(movieEl);
+    });
+
+};
+
 const addMovieHandler = () => {
     const title = document.getElementById('title').value;
     const extraName = document.getElementById('extra-name').value;
     const extraValue = document.getElementById('extra-value').value;
 
-    if(title.trim() === '' || extraName.trim() === '' || extraValue.trim() === '') {
+    if(title.trim() === '' || extraName.trim() === '' || extraValue.trim() ==='') {
         return;
     }
 
     const newMovie = {
         info: {
-            title, // or title: title,
+            title,
             [extraName]: extraValue
         },
         id: Math.random()
-    }
+    };
 
     movies.push(newMovie);
-    console.log(newMovie);
+    console.log(newMovie)
+    renderMovies();
 };
 
 addMovieBtn.addEventListener('click', addMovieHandler);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const movieList = document.getElementById('movie-list');
-// movieList.style['background-color'] = 'red';
-// movieList.style.display = 'block';
-
-// const userChosenKeyName = 'level';
-
-// let person = {
-//     'first name': 'Romulo',
-//     age: 36,
-//     hobbies: ['coding', 'cooking'],
-//     [userChosenKeyName]: '...',
-//     greet: function() {
-//         alert('Hi there!');
-//     },
-//     1.5: 'hello'
-// };
-
-// // person.age = 35;
-// delete person.age;
-// // person.age = undefined;
-// // person.age = null;
-// // person.greet();
-
-// person.isAdmin = true;
-
-// const keyName = 'first name';
-
-// console.log(person[keyName]);
-// console.log(person[1.5]);
-// console.log(person);
